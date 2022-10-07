@@ -1,3 +1,5 @@
+import string
+from types import NoneType
 from django.shortcuts import render, redirect
 from .models import Review
 from .forms import ReviewForm
@@ -59,3 +61,23 @@ def update(request, pk):
     }
     return render(request, "reviews/update.html", context)
 
+def search(request):
+    search = request.GET.get("search")
+    reviews = Review.objects.filter(title__contains=search)
+
+    if  len(search) == 0:
+        reviews = []
+        text = "검색어를 입력하세요."
+
+    elif len(reviews) == 0:
+        text = "검색 결과가 없습니다."
+        
+    else:
+        print(reviews)
+        text = ""
+        
+    context = {
+        "reviews" : reviews,
+        "text" : text,
+    }
+    return render(request, 'reviews/reviews.html', context)

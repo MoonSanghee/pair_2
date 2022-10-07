@@ -8,11 +8,32 @@
 }
 
 .a {
-  color: powderblue;
+  color: #283d3b;
   transition: color .5s;
   text-decoration: none;
 }
 
 .a:hover {
-  color: #283d3b;
+  color:rgb(159, 203, 149);
+}
+
+.main {
+  height: 100vh;
+  background-image: url('../images/main.png');
+}
+
+.b {
+  color : black;
+  transition: color .3s;
+}
+
+.b:hover {
+  color: grey;
+}
+
+.pencil {
+  position: absolute;
+  top : 10rem;
+  right : 10rem;
+  height: 5rem;
 }
