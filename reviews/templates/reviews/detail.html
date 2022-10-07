@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>안녕하세요</h1>
+    <div class="card m-3 p-3">{{ review.title }}</div>
+    <div class="card m-3 p-3">{{ review.content }}</div>
+    <div class="card m-3 p-3">{{ review.updated_at }}</div>
+    <div class="card m-3 p-3">{{ review.grade }}</div>
+    <div class="card m-3 p-3">{{ review.movie_name }}</div>
+    <a href="{% url 'reviews:update' review.pk %}">수정</a>
+    <a href="{% url 'reviews:delete' review.pk %}">삭제</a>
+{% endblock %}
