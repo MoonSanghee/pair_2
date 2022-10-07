@@ -1,0 +1,18 @@
+.log-size {
+  height: 4rem;
+}
+
+.nav-bg {
+  background: rgb(255,171,0);
+  background: linear-gradient(0deg, rgba(255,171,0,1) 0%, rgba(255,213,0,1) 70%);
+}
+
+.a {
+  color: powderblue;
+  transition: color .5s;
+  text-decoration: none;
+}
+
+.a:hover {
+  color: #283d3b;
+}
